@@ -4,9 +4,7 @@
 
   --clr-very-light-purp: #F8F5FE;
   --clr-light-purp: #E8CDF3;
-  --clr-dark-purp: #CE9FE0;
-  --clr-very-dark-purp: #8A49A4;
-  --clr-light-pink: #FEF5F9;
+  --clr-dark-purp: #8A49A4;
 }
 
 * {
@@ -15,9 +13,9 @@
 
 html,
 body {
-  margin: 0;
-  padding: 0 .25rem;   
+  margin: 0;  
   font-family: var(--ff-sec); 
+  font-size: .85rem;
   color: #000;
 }
 
@@ -28,9 +26,18 @@ h1 {
   margin: 0;
 }
 
+h2, h3 {
+  text-align: center;
+  margin: 0;
+  padding: 1rem 0;
+}
+
 h2 {
+  font-size: 1.5rem;    
+}
+
+h3 {
   font-size: 1.25rem;
-  font-weight: bold;
 }
 
 ul {
@@ -44,10 +51,98 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+  padding: .5rem 0;
+}
+
+.alert {
+  background-color: var(--clr-light-purp);
+  text-align: center;
+  position: relative;
+  
+}
+
+.alert i {
+  position: absolute;
+  right: 1rem;
+  top: .622rem;
+}
+
 .logo-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.why-herbie {
+  padding: 1rem 0;
+}
 
+.reasons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 .25rem;
+}
+
+.why-herbie-reason {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  text-align: center;
+  margin: .5rem;
+}
+
+.why-herbie-reason i {
+  font-size: 2rem;
+}
+
+
+
+.why-makeup div {
+  font-family: var(--ff-pri);
+  font-size: 1.15rem;
+  font-weight: bold;
+  padding: 1rem .25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;  
+}
+
+.why-makeup h3,
+.makeup-reason1,
+.makeup-reason3 {
+  background-color: var(--clr-very-light-purp);
+}
+
+.why-makeup div img,
+.why-makeup div p {
+  padding: 1rem;
+}
+
+footer {
+  color: #fff;
+  text-align: center;
+  background-color: var(--clr-dark-purp);
+  padding: 1rem 0;
+}
+
+footer a {
+  color: #fff;  
+}
+
+footer li {
+  margin: 1rem 0;
+}
+
+.social-links i {
+  margin: 0 1rem 1rem;
+}
+
+.copyright {
+  padding-top: 1rem;
+}
