@@ -16,27 +16,28 @@
 
   <header>
 
-    <div class="alert">
+    <div class="alert" id="alert">
       <p>free shipping... always</p>
       <i class="far fa-times-circle"></i>
     </div>
 
     <nav>
 
-      <div class="logo-links">
+      <div class="navbar">
+
         <div class="logo">
           <h1>herbie</h1>
         </div>
 
         <ul class="top-right-links">
           <li><a href="#"><i class="fab fa-searchengin"></i></a></li>
-          <li><a href="#">locations</a></li>
-          <li><a href="#">my account</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt"></i></a></li>
+          <li><a href="#"><i class="fas fa-user"></i></a></li>
           <li><a href="#"><i class="fas fa-shopping-bag"></i></a></li>
         </ul>
       </div>
 
-      <div class="main-shopping-categories">
+      <div class="shopping-categories">
         <ul>
           <li><a href="#">deals</a></li>
           <li><a href="#">skin care</a></li>
@@ -57,10 +58,27 @@
     <section class="showcase">
 
       <h2>love at first sight</h2>
+
       <div class="images-container">
-        <img src="./images/love1.png" alt="click here for our current deals">
-        <img src="./images/love2.png" alt="click here for our skin care products">
-        <img src="./images/love3.png" alt="click here for our hair products">
+        <a href="#">
+          <div class="image-container">
+            <img src="./images/love1.png" alt="click here for our current deals">
+            <div class="overlay">deals</div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="image-container">
+            <img src="./images/love2.png" alt="click here for our skin care products">
+            <div class="overlay">skin care</div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="image-container">
+            <img src="./images/love3.png" alt="click here for our hair products">
+            <div class="overlay">hair</div>
+          </div>
+        </a>
+
       </div>
 
     </section>
@@ -69,49 +87,54 @@
 
       <h3>best sellers</h3>
 
-      <div class="best-seller-item">
-        <a href="#"><img src="./images/best-sellers1.png" alt="eye shadow"></a>
-        <a href="#">
-          <p>dazzling eye shadow palette</p>
-        </a>
+      <div class="items-container">
+        <div class="best-seller-item">
+          <a href="#"><img src="./images/best-sellers1.png" alt="eye shadow"></a>
+          <a href="#">
+            <p>dazzling eye shadow palette</p>
+          </a>
+        </div>
+        <div class="best-seller-item">
+          <a href="#"><img src="./images/best-sellers2.png" alt="plush lipstick"></a>
+          <a href="#">
+            <p>long-lasting plush lipstick</p>
+          </a>
+        </div>
+        <div class="best-seller-item">
+          <a href="#"><img src="./images/best-sellers3.png" alt="lip gloss"></a>
+          <a href="#">
+            <p>uberlux liquid lip gloss</p>
+          </a>
+        </div>
+        <div class="best-seller-item">
+          <a href="#"><img src="./images/best-sellers4.png" alt="caffeine skin serum"></a>
+          <a href="#">
+            <p>pure caffeine power serum</p>
+          </a>
+        </div>
+        <div class="best-seller-item">
+          <a href="#"><img src="./images/best-sellers5.png" alt="skin cream"></a>
+          <a href="#">
+            <p>skin cream ultra hydrating</p>
+          </a>
+        </div>
+
+        <!-- <i class="fas fa-caret-right"></i> -->
+
+        <div class="best-seller-item">
+          <a href="#"><img src="./images/best-sellers6.png" alt="eye shadow"></a>
+          <a href="#">
+            <p>playfull eye shadow</p>
+          </a>
+        </div>
+        <div class="best-seller-item">
+          <a href="#"><img src="./images/best-sellers7.png" alt="facial powder"></a>
+          <a href="#">
+            <p>perfect powder matte finish</p>
+          </a>
+        </div>
       </div>
-      <div class="best-seller-item">
-        <a href="#"><img src="./images/best-sellers2.png" alt="plush lipstick"></a>
-        <a href="#">
-          <p>long-lasting plush lipstick</p>
-        </a>
-      </div>
-      <div class="best-seller-item">
-        <a href="#"><img src="./images/best-sellers3.png" alt="lip gloss"></a>
-        <a href="#">
-          <p>uberlux liquid lip gloss</p>
-        </a>
-      </div>
-      <div class="best-seller-item">
-        <a href="#"><img src="./images/best-sellers4.png" alt="caffeine skin serum"></a>
-        <a href="#">
-          <p>pure caffeine power serum</p>
-        </a>
-      </div>
-      <div class="best-seller-item">
-        <a href="#"><img src="./images/best-sellers5.png" alt="skin cream"></a>
-        <a href="#">
-          <p>skin cream ultra hydrating</p>
-        </a>
-      </div>
-      <i class="fas fa-caret-right"></i>
-      <div class="best-seller-item">
-        <a href="#"><img src="./images/best-sellers6.png" alt="eye shadow"></a>
-        <a href="#">
-          <p>playfull eye shadow</p>
-        </a>
-      </div>
-      <div class="best-seller-item">
-        <a href="#"><img src="./images/best-sellers7.png" alt="facial powder"></a>
-        <a href="#">
-          <p>perfect powder matte finish</p>
-        </a>
-      </div>
+
 
     </section>
 
@@ -199,6 +222,7 @@
   </footer>
 
   <script src="https://kit.fontawesome.com/cf7a317168.js" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
 
 </body>
 

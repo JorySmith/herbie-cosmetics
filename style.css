@@ -21,7 +21,7 @@ body {
 
 h1 {
   font-family: var(--ff-pri);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: normal;
   margin: 0;
 }
@@ -60,7 +60,7 @@ p {
   background-color: var(--clr-light-purp);
   text-align: center;
   position: relative;
-  
+  cursor: pointer;  
 }
 
 .alert i {
@@ -69,10 +69,100 @@ p {
   top: .622rem;
 }
 
-.logo-links {
+.hidden {
+  display: none;
+}
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: .5rem auto 0;
+  padding: 0 1rem;
+  max-width: 1250px;
+}
+
+.navbar ul {
+  display: flex;
+  font-size: 1.75rem;  
+  margin-left: 2rem;
+}
+
+.navbar ul li i {
+  color: var(--clr-dark-purp);
+  padding: 0 .5rem;
+}
+
+.shopping-categories ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: .75rem 0 0;
+}
+
+.shopping-categories ul li {
+  padding: .6rem .6rem;
+}
+
+.shopping-categories ul li:hover {
+  background-color: var(--clr-light-purp);
+  border-radius: 40%;
+}
+
+.showcase {
+  margin: 0 0 2rem;
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  margin: .25rem;
+}
+
+.image-container .overlay {
+  position: absolute;
+  bottom: .4rem;
+  left: .25rem;
+  background-color: rgba(232, 205, 243, .5);
+  text-shadow: 1px 1px 3px #000;
+  width: 98%;
+  transition: .5s ease; 
+  font-size: 1.5rem;
+  padding: 1.75rem;
+  text-align: center;
+}
+
+.best-sellers {
+  background-color: var(--clr-light-purp);
+  padding: 1rem 0;
+}
+.items-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: .25rem;
+}
+
+.best-seller-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
+}
+
+.best-seller-item p {
+  text-align: center;
+  max-width: 18ch;
 }
 
 .why-herbie {
