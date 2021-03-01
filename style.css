@@ -1,2 +1,53 @@
-font-family: 'Gruppo', cursive;
-font-family: 'Montserrat', sans-serif;
+:root {
+  --ff-pri: 'Gruppo', cursive;
+  --ff-sec: 'Montserrat', sans-serif;
+
+  --clr-very-light-purp: #F8F5FE;
+  --clr-light-purp: #E8CDF3;
+  --clr-dark-purp: #CE9FE0;
+  --clr-very-dark-purp: #8A49A4;
+  --clr-light-pink: #FEF5F9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0 .25rem;   
+  font-family: var(--ff-sec); 
+  color: #000;
+}
+
+h1 {
+  font-family: var(--ff-pri);
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.logo-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
