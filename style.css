@@ -63,6 +63,7 @@ p {
   cursor: pointer;  
   font-size: 1rem;
   padding: .3rem 0;
+  z-index: 2;
 }
 
 .alert i {
@@ -76,12 +77,15 @@ p {
 }
 
 .navbar {
+  background-color: #FFF;
+  box-shadow: 1px 1px 2px #e6e6e6;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: .5rem auto 0;
-  padding: 0 1rem;
+  margin: auto 0;
+  padding: .5rem 1rem;
   max-width: 1250px;
+  z-index: 1;
 }
 
 .navbar ul {
@@ -93,6 +97,16 @@ p {
 .navbar ul li i {
   color: var(--clr-dark-purp);
   padding: 0 .5rem;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 1rem;
 }
 
 .shopping-categories ul {
@@ -123,6 +137,10 @@ p {
 
 .image-container {
   position: relative;
+}
+
+.image-container:hover {
+  transform: scale(1.05);  
 }
 
 .image-container img {
