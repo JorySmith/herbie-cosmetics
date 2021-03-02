@@ -61,12 +61,14 @@ p {
   text-align: center;
   position: relative;
   cursor: pointer;  
+  font-size: 1rem;
+  padding: .3rem 0;
 }
 
 .alert i {
   position: absolute;
   right: 1rem;
-  top: .622rem;
+  top: 1rem;
 }
 
 .hidden {
