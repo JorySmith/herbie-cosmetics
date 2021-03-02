@@ -258,7 +258,11 @@ footer {
 }
 
 footer a {
-  color: #fff;  
+  color: #fff;    
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 footer li {
