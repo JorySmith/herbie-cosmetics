@@ -1,5 +1,5 @@
 # herbie-cosmetics
-(in-progress) A local business website prototype
+A local costmetics business website prototype
 
 Figma markup link and image:
 
