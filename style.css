@@ -76,15 +76,21 @@ p {
   display: none;
 }
 
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .navbar {
   background-color: #FFF;
   box-shadow: 1px 1px 2px #e6e6e6;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: auto 0;
+  align-items: center;  
   padding: .5rem 1rem;
   max-width: 1250px;
+  width: 100%;
   z-index: 1;
 }
 
@@ -102,7 +108,7 @@ p {
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;  
 }
 
 .sticky + .content {
@@ -166,6 +172,7 @@ p {
   background-color: var(--clr-light-purp);
   padding: 1rem 0;
 }
+
 .items-container {
   display: flex;
   justify-content: center;
@@ -211,8 +218,6 @@ p {
 .why-herbie-reason i {
   font-size: 2rem;
 }
-
-
 
 .why-makeup div {
   font-family: var(--ff-pri);
