@@ -82,9 +82,14 @@ nav {
   align-items: center;
 }
 
+nav hr {
+  border: 1px solid #f1f1f1;
+  width: 90%;
+  margin: 0;
+}
+
 .navbar {
-  background-color: #FFF;
-  box-shadow: 1px 1px 2px #e6e6e6;
+  background-color: #FFF;  
   display: flex;
   justify-content: space-between;
   align-items: center;  
