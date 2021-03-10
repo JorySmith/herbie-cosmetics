@@ -164,7 +164,7 @@ nav hr {
   position: absolute;
   bottom: .4rem;
   left: .25rem;
-  background-color: rgba(232, 205, 243, .5);
+  background-color: rgba(232, 205, 243, .35);
   text-shadow: 1px 1px 3px #000;
   width: 98%;
   transition: .5s ease; 
@@ -252,6 +252,7 @@ nav hr {
 
 footer {
   color: #fff;
+  font-size: 1rem;
   text-align: center;
   background-color: var(--clr-dark-purp);
   padding: 1rem 0;
@@ -265,8 +266,12 @@ footer a:hover {
   text-decoration: underline;
 }
 
+footer ul {
+  padding: 1rem 0;
+}
+
 footer li {
-  margin: 1rem 0;
+  padding: .75rem 0;
 }
 
 .social-links i {

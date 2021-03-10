@@ -2,14 +2,13 @@ const alert = document.getElementById('alert');
 const navbar = document.getElementById('navbar');
 const sticky = navbar.offsetTop;
 
+alert.addEventListener('click', toggleHidden);
+
 window.onscroll = function () {
   stickyNav()
 };
 
-alert.addEventListener('click', toggleHidden);
-
 function toggleHidden() {
-  // toggle hidden 
   alert.classList.toggle('hidden');
 }
 
