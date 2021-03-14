@@ -179,6 +179,12 @@ nav hr {
   border-radius: 10px;
 }
 
+.rewards-btn:hover,
+.rewards-btn:focus {
+  color: #fff;
+  background-color: var(--clr-dark-purp);
+}
+
 .rewards-cartItems-wrapper {
   display: flex;
   flex-direction: column;
@@ -243,6 +249,11 @@ nav hr {
   width: 50%;
   border: var(--clr-dark-purp);
   border-radius: 15px;
+}
+
+.checkout-btn:hover,
+.checkout-btn:focus {
+  transform: scale(1.05);
 }
 
 .shopping-categories ul {
