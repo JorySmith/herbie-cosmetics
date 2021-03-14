@@ -78,7 +78,7 @@ button {
 }
 
 .hidden {
-  display: none;
+  /* display: none; */
 }
 
 nav {
@@ -117,7 +117,24 @@ nav hr {
 
 .top-right-links li i:hover,
 .top-right-links li i:focus {
-  color: var(--clr-grey);
+  color: #000;
+}
+
+.fa-shopping-bag {
+  position: relative;
+}
+
+.fa-shopping-bag::after {
+  content: '2';
+  position: absolute;
+  top: -5px;
+  right: -2px;
+  font-size: 1.1rem;
+  color: #000;
+  background-color: #fff;
+  border: 2px solid var(--clr-light-purp);
+  padding: 2px 4px;
+  border-radius: 50%;
 }
 
 .sticky {
@@ -128,6 +145,104 @@ nav hr {
 
 .sticky + .content {
   padding-top: 1rem;
+}
+
+.shopping-cart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-very-light-purp);
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--clr-dark-purp);
+}
+
+.herbie-rewards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.rewards-info-container p {
+  margin: 1rem;
+  text-align: center;
+}
+
+.rewards-btn {
+  font-family: inherit;
+  background-color: #fff;
+  border: 3px solid var(--clr-dark-purp);
+  padding: .5rem 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+}
+
+.rewards-cartItems-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.shopping-cart-item {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding: .5rem 1rem;
+  margin: .75rem 0;
+}
+
+.cart-item-img img {
+  max-width: 95px;
+}
+
+.name-qty-price-remove-container {
+  display: flex;
+  margin: auto 0;
+}
+
+.cart-item-name,
+.cart-item-qty-container,
+.cart-item-price-container {
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.qty-selector {
+  cursor: pointer;
+  border: 1px solid var(--clr-dark-purp);
+  padding: 0 .75rem;
+  border-radius: 10px;
+}
+
+.qty-selector p {
+  padding: .25rem 0;
+}
+
+.cart-item-qty,
+.cart-item-price {
+  padding-top: 0;
+}
+
+.qty-arrow {
+  padding-left: 5px;
+}
+
+.fa-trash {
+  color: var(--clr-dark-purp);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.checkout-btn {
+  font-family: inherit;
+  color: #fff;
+  background-color: var(--clr-dark-purp);
+  padding: 1rem;
+  margin: 1rem 0;
+  width: 50%;
+  border: var(--clr-dark-purp);
+  border-radius: 15px;
 }
 
 .shopping-categories ul {
@@ -245,7 +360,7 @@ nav hr {
 .add-to-cart-btn:hover,
 .add-to-cart-btn:focus {
   color: #000;
-  background-color: var(--clr-very-light-purp);
+  background-color: #fff;
   border: 2px solid var(--clr-dark-purp); 
 }
 
