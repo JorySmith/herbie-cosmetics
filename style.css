@@ -125,7 +125,7 @@ nav hr {
 }
 
 .fa-shopping-bag::after {
-  content: '2';
+  content: '1';
   position: absolute;
   top: -5px;
   right: -2px;
