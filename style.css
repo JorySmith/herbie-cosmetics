@@ -77,10 +77,6 @@ button {
   top: 1rem;
 }
 
-.hidden {
-  /* display: none; */
-}
-
 nav {
   display: flex;
   flex-direction: column;
@@ -254,6 +250,10 @@ nav hr {
 .checkout-btn:hover,
 .checkout-btn:focus {
   transform: scale(1.1);
+}
+
+.hidden {
+  display: none;
 }
 
 .shopping-categories ul {
