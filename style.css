@@ -120,8 +120,7 @@ nav hr {
   position: relative;
 }
 
-.total-cart-items {
-  content: var(--totalShoppingCartItems);
+.total-cart-items {  
   position: absolute;
   top: -5px;
   right: -2px;
