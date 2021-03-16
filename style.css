@@ -146,11 +146,27 @@ nav hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
+  width: 100%;
   background-color: var(--clr-very-light-purp);
   padding: 1rem .25rem;
   margin-bottom: 2rem;
   border: 1px solid var(--clr-dark-purp);
+  z-index: 999;
+}
+
+.shopping-cart-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.close-cart-window {  
+  color: var(--clr-dark-purp);
+  align-self: flex-end;
+  font-size: 1rem;
+  cursor: pointer;
+  padding-right: 1rem;
 }
 
 .herbie-rewards,
@@ -469,4 +485,10 @@ footer li {
 
 .copyright {
   padding-top: 1rem;
+}
+
+@media (min-width: 660px) {
+  .shopping-cart-container {
+    width: 50vw;
+  }
 }
