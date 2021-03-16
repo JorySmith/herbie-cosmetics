@@ -204,7 +204,7 @@ nav hr {
   padding: .5rem 0;
 }
 
-.name-qty-price-remove-container {
+.qty-price-remove-container {
   display: flex;
   margin: auto 0;
 }
@@ -216,6 +216,10 @@ nav hr {
 .fa-trash {
   padding: 0 .75rem;
   text-align: center;
+}
+
+.cart-item-name {
+  margin-bottom: .5rem;
 }
 
 .qty-selector {
