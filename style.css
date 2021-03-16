@@ -120,8 +120,8 @@ nav hr {
   position: relative;
 }
 
-.fa-shopping-bag::after {
-  content: '1';
+.total-cart-items {
+  content: var(--totalShoppingCartItems);
   position: absolute;
   top: -5px;
   right: -2px;
@@ -154,11 +154,16 @@ nav hr {
   border: 1px solid var(--clr-dark-purp);
 }
 
+.herbie-rewards,
+.shopping-cart-item {
+  margin: .25rem 0;
+}
+
 .herbie-rewards {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: #fff;  
 }
 
 .rewards-info-container p {
@@ -192,8 +197,7 @@ nav hr {
   align-items: center;
   flex-wrap: wrap;
   background-color: #fff;
-  padding: .5rem 1rem;
-  margin: .75rem 0;
+  padding: .5rem 1rem;  
 }
 
 .cart-item-img img {
@@ -211,7 +215,7 @@ nav hr {
 .cart-item-qty-container,
 .cart-item-price-container,
 .fa-trash {
-  padding: 0 .5rem;
+  padding: 0 .75rem;
   text-align: center;
 }
 
@@ -235,9 +239,13 @@ nav hr {
   padding-left: 5px;
 }
 
+.cart-item-remove {
+  align-self: center;
+}
+
 .fa-trash {
   color: var(--clr-dark-purp);
-  font-size: 1rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
