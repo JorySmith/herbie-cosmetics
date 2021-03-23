@@ -43,7 +43,25 @@
         </ul>
       </div>
 
-      <div class="shopping-cart-container hidden">
+      <hr>
+
+      <div class="shopping-categories">
+        <ul>
+          <li><a href="#">deals</a></li>
+          <li><a href="#">skin care</a></li>
+          <li><a href="#">hair</a></li>
+          <li><a href="#">nails</a></li>
+          <li><a href="#">eyes</a></li>
+          <li><a href="#">lips</a></li>
+          <li><a href="#">fragrance</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+    <div class="shopping-cart hidden">
+
+      <div class="shopping-cart-container">
 
         <div class="shopping-cart-header">
           <div class="close-cart-window">
@@ -70,16 +88,13 @@
           </div>
 
           <div class="shopping-cart-item">
-
             <div class="cart-item-img">
-              <img src="./images/best-sellers1.png" alt="eye shadow">
+              <img class="cart-item-img" src="./images/best-sellers1.png" alt="eye shadow">
             </div>
             <p class="cart-item-name">
               dazzling eye shadow palette
             </p>
-
             <div class="qty-price-remove-container">
-
               <div class="cart-item-qty-container">
                 <p class="cart-item-qty">Qty</p>
                 <div class="qty-selector">
@@ -87,46 +102,46 @@
                 </div>
               </div>
               <div class="cart-item-price-container">
-                <p class="cart-item-price">Price</p>
-                <p>$49</p>
+                <p>Price</p>
+                <p class="cart-item-price">$49</p>
               </div>
               <div class="cart-item-remove">
                 <i class="fas fa-trash"></i>
               </div>
-
             </div>
-
           </div>
 
           <div class="shopping-cart-item">
-
             <div class="cart-item-img">
-              <img src="./images/best-sellers1.png" alt="eye shadow">
+              <img class="cart-item-img" src="http://127.0.0.1:5500/herbie-cosmetics/images/best-sellers7.png">
             </div>
             <p class="cart-item-name">
-              dazzling eye shadow palette
+              perfect powder matte finish
             </p>
-
             <div class="qty-price-remove-container">
-
               <div class="cart-item-qty-container">
                 <p class="cart-item-qty">Qty</p>
                 <div class="qty-selector">
-                  <p>1 <span class="qty-arrow">&#9660</span></p>
+                  <p>1 <span class="qty-arrow">▼</span></p>
                 </div>
               </div>
               <div class="cart-item-price-container">
-                <p class="cart-item-price">Price</p>
-                <p>$49</p>
+                <p>Price</p>
+                <p class="cart-item-price">$49</p>
               </div>
               <div class="cart-item-remove">
-                <i class="fas fa-trash"></i>
+                <i class="fas fa-trash" aria-hidden="true"></i>
               </div>
-
             </div>
-
           </div>
 
+        </div>
+
+        <div class="shopping-cart-total">
+          <p>Total:</p>
+          <p class="cart-total-price">
+            $79
+          </p>
         </div>
 
         <button class="checkout-btn">
@@ -134,22 +149,8 @@
         </button>
 
       </div>
+    </div>
 
-      <hr>
-
-      <div class="shopping-categories">
-        <ul>
-          <li><a href="#">deals</a></li>
-          <li><a href="#">skin care</a></li>
-          <li><a href="#">hair</a></li>
-          <li><a href="#">nails</a></li>
-          <li><a href="#">eyes</a></li>
-          <li><a href="#">lips</a></li>
-          <li><a href="#">fragrance</a></li>
-        </ul>
-      </div>
-
-    </nav>
 
   </header>
 
@@ -194,52 +195,52 @@
 
       <div class="items-container">
 
-        <div class="best-seller-item">
-          <img src="./images/best-sellers1.png" alt="eye shadow">
-          <p>dazzling eye shadow palette</p>
+        <div class="item-container">
+          <img class="item-img" src="./images/best-sellers1.png" alt="eye shadow">
+          <p class="item-name">dazzling eye shadow palette</p>
           <p class="item-price">$49</p>
           <button class="add-to-cart-btn">Add to Cart</button>
 
         </div>
 
-        <div class="best-seller-item">
-          <img src="./images/best-sellers2.png" alt="plush lipstick">
-          <p>long-lasting plush lipstick</p>
+        <div class="item-container">
+          <img class="item-img" src="./images/best-sellers2.png" alt="plush lipstick">
+          <p class="item-name">long-lasting plush lipstick</p>
           <p class="item-price">$19</p>
           <button class="add-to-cart-btn">Add to Cart</button>
         </div>
 
-        <div class="best-seller-item">
-          <img src="./images/best-sellers3.png" alt="lip gloss">
-          <p>uberlux liquid lip gloss</p>
+        <div class="item-container">
+          <img class="item-img" src="./images/best-sellers3.png" alt="lip gloss">
+          <p class="item-name">uberlux liquid lip gloss</p>
           <p class="item-price">$19</p>
           <button class="add-to-cart-btn">Add to Cart</button>
         </div>
 
-        <div class="best-seller-item">
-          <img src="./images/best-sellers4.png" alt="caffeine skin serum">
-          <p>pure caffeine power serum</p>
+        <div class="item-container">
+          <img class="item-img" src="./images/best-sellers4.png" alt="caffeine skin serum">
+          <p class="item-name">pure caffeine power serum</p>
           <p class="item-price">$29</p>
           <button class="add-to-cart-btn">Add to Cart</button>
         </div>
 
-        <div class="best-seller-item">
-          <img src="./images/best-sellers5.png" alt="skin cream">
-          <p>skin cream ultra hydrating</p>
+        <div class="item-container">
+          <img class="item-img" src="./images/best-sellers5.png" alt="skin cream">
+          <p class="item-name">skin cream ultra hydrating</p>
           <p class="item-price">$19</p>
           <button class="add-to-cart-btn">Add to Cart</button>
         </div>
 
-        <div class="best-seller-item">
-          <img src="./images/best-sellers6.png" alt="eye shadow">
-          <p>playfull eye shadow</p>
+        <div class="item-container">
+          <img class="item-img" src="./images/best-sellers6.png" alt="eye shadow">
+          <p class="item-name">playfull eye shadow</p>
           <p class="item-price">$29</p>
           <button class="add-to-cart-btn">Add to Cart</button>
         </div>
 
-        <div class="best-seller-item">
-          <img src="./images/best-sellers7.png" alt="facial powder">
-          <p>perfect powder matte finish</p>
+        <div class="item-container">
+          <img class="item-img" src="./images/best-sellers7.png" alt="facial powder">
+          <p class="item-name">perfect powder matte finish</p>
           <p class="item-price">$49</p>
           <button class="add-to-cart-btn">Add to Cart</button>
         </div>
