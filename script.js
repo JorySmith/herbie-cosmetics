@@ -1,4 +1,4 @@
-const alert = document.getElementById('alert');
+const shippingAlert = document.getElementById('alert');
 const navbar = document.getElementById('navbar');
 const sticky = navbar.offsetTop;
 const navbarCartIcon = document.querySelector('.fa-shopping-bag');
@@ -8,8 +8,8 @@ const removeCartItemIcons = document.querySelectorAll('.fa-trash');
 const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
 
 //event listener for click to remove free shipping alert banner
-alert.addEventListener('click', () => {
-  alert.classList.toggle('hidden');
+shippingAlert.addEventListener('click', () => {
+  shippingAlert.classList.toggle('hidden');
 });
 
 //create a sticky nav once the user starts to scroll down
@@ -29,7 +29,7 @@ removeCartItemIcons.forEach(el =>
 
 //event listeners for 'add to cart' buttons
 addToCartButtons.forEach(el =>
-  el.addEventListener('click', itemClickedAddToCart));
+  el.addEventListener('click', addClickedItemToCart));
 
 updateNavbarCartIconTotal()
 updateTotalShoppingCartItems()
@@ -54,54 +54,60 @@ function stickyNav() {
   }
 }
 
-//update navbar shopping cart icon to reflect total items in shopping cart 
 function updateNavbarCartIconTotal() {
+  //update navbar shopping cart icon to reflect total items in shopping cart
   const totalCartItems = document.getElementById('total-cart-items');
   const updatedTotal = updateTotalShoppingCartItems().length.toString();
+
+  //toggle hidden on cart icon total, avoid showing a zero
+  //if cart is empty, when you add to cart, unhide icon
   if (updatedTotal == 0) {
-    //toggle hidden on cart icon total, avoid showing a zero
     totalCartItems.classList.toggle('hidden');
+    totalCartItems.innerText = updatedTotal
   } else {
     totalCartItems.innerText = updatedTotal;
   }
 }
 
-//get total number of items in the shopping cart
 function updateTotalShoppingCartItems() {
+  //get total number of items in the shopping cart  
   const totalShoppingCartItems = document.getElementsByClassName('shopping-cart-item');
   return totalShoppingCartItems
 }
 
-//remove an item from the shopping cart
-function removeShoppingCartItem(event) {
-  //determine which item was clicked, remove that item
-  event.target.parentElement.parentElement.parentElement.remove();
-  updateTotalShoppingCartItems();
-  updateNavbarCartIconTotal();
-}
+function addClickedItemToCart(event) {
+  //update navbar cart icon and total cart items
+  //get button clicked item name, image, and price
+  //grab clicked item container/shopping-cart-item, query classes inside it
+  //see if item is already in the cart, add reject message if so
 
-//add item to the shopping cart
-function itemClickedAddToCart(event) {
-  //see if item is already in the cart, add reject message
-  //get item name, image, and price, add it to the shopping cart
-  //easiest way is to grab item container first, the query inside it
-  const itemContainer = event.target.parentElement
-  //grab clicked item name, image, price
-  const itemImage = itemContainer.getElementsByClassName('item-img')[0].src
-  const itemName = itemContainer.getElementsByClassName('item-name')[0].innerText
-  const itemPrice = itemContainer.getElementsByClassName('item-price')[0].innerText
+  updateNavbarCartIconTotal()
+  updateTotalShoppingCartItems()
+
+  const clickedItemContainer = event.target.parentElement
+  const itemImage = clickedItemContainer.getElementsByClassName('item-img')[0].src
+  const itemName = clickedItemContainer.getElementsByClassName('item-name')[0].innerText
+  const itemPrice = clickedItemContainer.getElementsByClassName('item-price')[0].innerText;
+
+  //see if current items names in cart match clicked item name
+  const currentCartItemNames = document.getElementsByClassName('cart-item-name');
+
+  for (let i = 0; i < currentCartItemNames.length; i++) {
+    if (currentCartItemNames[i].innerText.trim() == itemName) {
+      alert("That item is already in your shopping cart");
+      return
+    }
+  }
   addItemToCart(itemImage, itemName, itemPrice)
 
 }
 
 function addItemToCart(itemImage, itemName, itemPrice) {
-  //add clicked item to shopping cart  
   //create new cart item div to be added to the shopping cart
   //get shopping cart item div to append new cart item
-  const newCartItemDiv = document.createElement('div')
-  newCartItemDiv.classList.add('shopping-cart-item')
-  // console.log(itemImage, itemName, ItemPrice)  
-  const currentItems = document.getElementsByClassName('rewards-cartItems-wrapper')[0].append(newCartItemDiv)
+  const newCartItemDiv = document.createElement('div');
+  newCartItemDiv.classList.add('shopping-cart-item');
+  document.getElementsByClassName('rewards-cartItems-wrapper')[0].append(newCartItemDiv);
   const testDiv = `    
   <div class="cart-item-img">
     <img class="cart-item-img" src="${itemImage}">
@@ -128,5 +134,12 @@ function addItemToCart(itemImage, itemName, itemPrice) {
   updateTotalShoppingCartItems();
   updateNavbarCartIconTotal();
   newCartItemDiv.getElementsByClassName('fa-trash')[0].addEventListener('click', removeShoppingCartItem);
+}
+
+function removeShoppingCartItem(event) {
+  //determine which item was clicked, remove that item
+  event.target.parentElement.parentElement.parentElement.remove();
+  updateTotalShoppingCartItems();
+  updateNavbarCartIconTotal();
 }
 
