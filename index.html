@@ -100,31 +100,19 @@
                 <div class="cart-item-qty-container">
                   <p class="cart-item-qty">Qty</p>
                   <div class="qty-selector">
-                    <p>1 <span class="qty-arrow">&#9660</span></p>
-                  </div>
-                </div>
-                <div class="cart-item-price-container">
-                  <p>Price</p>
-                  <p class="cart-item-price">$49</p>
-                </div>
-                <div class="cart-item-remove">
-                  <i class="fas fa-trash"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="shopping-cart-item">
-              <div class="cart-item-img">
-                <img class="cart-item-img" src="./images/best-sellers7.png">
-              </div>
-              <p class="cart-item-name">
-                perfect powder matte finish
-              </p>
-              <div class="qty-price-remove-container">
-                <div class="cart-item-qty-container">
-                  <p class="cart-item-qty">Qty</p>
-                  <div class="qty-selector">
-                    <p>1 <span class="qty-arrow">▼</span></p>
+                    <label for="qty"></label>
+                    <select class="qty" id="qty" name="quantity">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="1">5</option>
+                      <option value="2">6</option>
+                      <option value="3">7</option>
+                      <option value="4">8</option>
+                      <option value="3">9</option>
+                      <option value="4">10</option>
+                    </select>
                   </div>
                 </div>
                 <div class="cart-item-price-container">
@@ -139,23 +127,19 @@
 
           </div>
 
+          <div class="shopping-cart-total">
+            <span>Total:</span>
+            <span class="cart-total-price" id="cart-total-price">
+              $79
+            </span>
+          </div>
 
+          <button class="checkout-btn" id="checkout-btn">
+            Checkout
+          </button>
 
         </div>
-
-        <div class="shopping-cart-total">
-          <p>Total:</p>
-          <p class="cart-total-price" id="cart-total-price">
-            $79
-          </p>
-        </div>
-
-        <button class="checkout-btn" id="checkout-btn">
-          Checkout
-        </button>
-
       </div>
-    </div>
 
 
   </header>

@@ -125,7 +125,19 @@ function addItemToCart(itemImage, itemName, itemPrice) {
     <div class="cart-item-qty-container">
       <p class="cart-item-qty">Qty</p>
       <div class="qty-selector">
-        <p>1 <span class="qty-arrow">&#9660</span></p>
+        <label for="qty"></label>
+        <select class="qty" id="qty" name="quantity">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="1">5</option>
+          <option value="2">6</option>
+          <option value="3">7</option>
+          <option value="4">8</option>
+          <option value="3">9</option>
+          <option value="4">10</option>
+        </select>
       </div>
     </div>
     <div class="cart-item-price-container">
