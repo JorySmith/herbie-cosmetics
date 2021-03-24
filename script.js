@@ -33,6 +33,7 @@ addToCartButtons.forEach(el =>
 
 updateNavbarCartIconTotal()
 updateTotalShoppingCartItems()
+updateShoppingCartTotal()
 
 
 function toggleCart() {
@@ -83,6 +84,7 @@ function addClickedItemToCart(event) {
 
   updateNavbarCartIconTotal()
   updateTotalShoppingCartItems()
+  updateShoppingCartTotal()
 
   const clickedItemContainer = event.target.parentElement
   const itemImage = clickedItemContainer.getElementsByClassName('item-img')[0].src
@@ -133,6 +135,7 @@ function addItemToCart(itemImage, itemName, itemPrice) {
   newCartItemDiv.innerHTML = testDiv
   updateTotalShoppingCartItems();
   updateNavbarCartIconTotal();
+  updateShoppingCartTotal()
   newCartItemDiv.getElementsByClassName('fa-trash')[0].addEventListener('click', removeShoppingCartItem);
 }
 
@@ -141,5 +144,20 @@ function removeShoppingCartItem(event) {
   event.target.parentElement.parentElement.parentElement.remove();
   updateTotalShoppingCartItems();
   updateNavbarCartIconTotal();
+  updateShoppingCartTotal()
 }
 
+function updateShoppingCartTotal() {
+  //grab each item's price, sum it
+  const cartItemPrices = document.getElementsByClassName('cart-item-price');
+  let totalArray = [];
+  for (let i = 0; i < cartItemPrices.length; i++) {
+    totalArray.push(parseFloat(cartItemPrices[i].innerText.replace('$', '')));
+  }
+  const cartTotal = totalArray.reduce((sum, currentItem) => {
+    return currentItem + sum;
+  }, 0);
+
+  // insert total into shopping cart total
+  document.getElementById('cart-total-price').innerText = "$" + cartTotal;
+}
