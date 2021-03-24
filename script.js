@@ -6,6 +6,7 @@ const shoppingCart = document.querySelector('.shopping-cart');
 const closeCartDiv = document.querySelector('.close-cart-window');
 const removeCartItemIcons = document.querySelectorAll('.fa-trash');
 const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+const completePurchase = document.getElementById('checkout-btn');
 
 //event listener for click to remove free shipping alert banner
 shippingAlert.addEventListener('click', () => {
@@ -30,6 +31,9 @@ removeCartItemIcons.forEach(el =>
 //event listeners for 'add to cart' buttons
 addToCartButtons.forEach(el =>
   el.addEventListener('click', addClickedItemToCart));
+
+//event listener for shopping cart 'checkout'
+completePurchase.addEventListener('click', clearCartAfterPurchase);
 
 updateNavbarCartIconTotal()
 updateTotalShoppingCartItems()
@@ -109,7 +113,7 @@ function addItemToCart(itemImage, itemName, itemPrice) {
   //get shopping cart item div to append new cart item
   const newCartItemDiv = document.createElement('div');
   newCartItemDiv.classList.add('shopping-cart-item');
-  document.getElementsByClassName('rewards-cartItems-wrapper')[0].append(newCartItemDiv);
+  document.getElementsByClassName('shopping-cart-items')[0].append(newCartItemDiv);
   const testDiv = `    
   <div class="cart-item-img">
     <img class="cart-item-img" src="${itemImage}">
@@ -160,4 +164,20 @@ function updateShoppingCartTotal() {
 
   // insert total into shopping cart total
   document.getElementById('cart-total-price').innerText = "$" + cartTotal;
+}
+
+function clearCartAfterPurchase() {
+  //get all shopping cart items, remove them
+  const currentItems = document.getElementsByClassName('shopping-cart-items')[0];
+
+  if (currentItems.hasChildNodes()) {
+    alert('Thank you for your purchase!')
+    while (currentItems.hasChildNodes()) {
+      currentItems.removeChild(currentItems.firstChild)
+    }
+    updateNavbarCartIconTotal()
+    updateShoppingCartTotal()
+  } else {
+    alert('Your shopping cart is empty. Please add items to the cart.')
+  }
 }
