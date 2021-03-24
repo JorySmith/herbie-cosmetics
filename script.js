@@ -35,8 +35,8 @@ addToCartButtons.forEach(el =>
 //event listener for shopping cart 'checkout'
 completePurchase.addEventListener('click', clearCartAfterPurchase);
 
-updateNavbarCartIconTotal()
-updateTotalShoppingCartItems()
+updateTotalShoppingCartItems();
+updateNavbarCartIconTotal();
 updateShoppingCartTotal()
 
 
@@ -161,6 +161,7 @@ function removeShoppingCartItem(event) {
   updateTotalShoppingCartItems();
   updateNavbarCartIconTotal();
   updateShoppingCartTotal()
+  console.log()
 }
 
 function updateShoppingCartTotal() {
@@ -182,7 +183,7 @@ function clearCartAfterPurchase() {
   //get all shopping cart items, remove them
   const currentItems = document.getElementsByClassName('shopping-cart-items')[0];
 
-  if (currentItems.hasChildNodes()) {
+  if (updateTotalShoppingCartItems().length > 0) {
     alert('Thank you for your purchase!')
     while (currentItems.hasChildNodes()) {
       currentItems.removeChild(currentItems.firstChild)
