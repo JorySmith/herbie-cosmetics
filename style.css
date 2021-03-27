@@ -370,7 +370,10 @@ nav hr {
   padding: 1rem 0;
 }
 
-#best-sellers {
+#best-sellers,
+#why-herbie,
+#why-makeup,
+#contact-us {
   display: block;
   padding-top: 110px;
   margin-top: -110px;
@@ -471,6 +474,66 @@ nav hr {
 .why-makeup div img,
 .why-makeup div p {
   padding: 1rem;
+}
+
+.contact-us {
+  margin: 1rem 0;
+
+}
+
+.contact-us h1 {
+  background-color: var(--dark-orange);
+  color: #000;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem 0 0;
+}
+
+.contact-us-container {  
+  padding: 1rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-us-form .entry {
+  display: flex;
+  flex-direction: column;
+  padding: .1rem 0;
+}
+
+.contact-us-form label {
+  padding: .25rem 0;
+  margin: 0;
+}
+
+.entry input,
+.entry textarea {
+  padding: .5rem .5rem;
+  margin: 0;
+  border: 1px solid #000;
+}
+
+.entry input:focus,
+.entry textarea:focus {
+  outline: 2px solid var(--dark-orange);  
+  border: 2px solid var(--dark-orange);
+}
+
+.contact-us-form button {  
+  background-color: #fff;
+  border: 4px solid var(--clr-dark-purp);
+  color: #000;
+  font-size: 1.25rem;
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0 0;
+}
+
+.contact-us-form button:hover,  
+.contact-us-form button:focus {  
+  background-color: var(--clr-dark-purp);
+  color: #fff;
 }
 
 footer {

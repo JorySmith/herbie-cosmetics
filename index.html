@@ -32,9 +32,6 @@
         </div>
 
         <ul class="top-right-links">
-          <li><a href="#"><i class="fab fa-searchengin"></i></a></li>
-          <li><a href="#"><i class="fas fa-map-marker-alt"></i></a></li>
-          <li><a href="#"><i class="fas fa-user"></i></a></li>
           <li class="shopping-cart-icon">
             <i class="fas fa-shopping-bag">
               <span class="total-cart-items" id="total-cart-items">1</span>
@@ -47,13 +44,13 @@
 
       <div class="shopping-categories">
         <ul>
-          <li><a href="#best-sellers">deals</a></li>
-          <li><a href="#best-sellers">skin care</a></li>
-          <li><a href="#best-sellers">hair</a></li>
+          <li><a href="#best-sellers">best sellers</a></li>
+          <li><a href="#why-herbie">why herbie</a></li>
+          <li><a href="#why-makeup">why makeup</a></li>
           <li><a href="#best-sellers">nails</a></li>
           <li><a href="#best-sellers">eyes</a></li>
           <li><a href="#best-sellers">lips</a></li>
-          <li><a href="#best-sellers">fragrance</a></li>
+          <li><a href="#contact-us">contact us</a></li>
         </ul>
       </div>
 
@@ -154,21 +151,21 @@
         <div class="image-container">
           <a href="#best-sellers">
             <img src="./images/love1.png" alt="click here for our current deals">
-            <div class="overlay">deals</div>
+            <div class="overlay">best sellers</div>
           </a>
         </div>
 
         <div class="image-container">
-          <a href="#best-sellers">
+          <a href="#why-herbie">
             <img src="./images/love2.png" alt="click here for our skin care products">
-            <div class="overlay">skin care</div>
+            <div class="overlay">why herbie</div>
           </a>
         </div>
 
         <div class="image-container">
-          <a href="#best-sellers">
+          <a href="#why-makeup">
             <img src="./images/love3.png" alt="click here for our hair products">
-            <div class="overlay">hair</div>
+            <div class="overlay">why makeup</div>
           </a>
         </div>
 
@@ -241,6 +238,7 @@
 
     <section class="why-herbie">
 
+      <a id="why-herbie"></a>
       <h3>why herbie?</h3>
 
       <div class="reasons-container">
@@ -272,6 +270,7 @@
 
     <section class="why-makeup">
 
+      <a id="why-makeup"></a>
       <h3>why makeup?</h3>
 
       <div class="makeup-reason1">
@@ -295,6 +294,22 @@
 
     </section>
 
+    <section class="contact-us" id="contact-us">
+      <h1>Contact Us</h1>
+      <div class="contact-us-container">
+        <form class="contact-us-form" action="POST" method="post">
+          <div class="entry"><label for="first-name">First Name:</label><input type="text" required></div>
+          <div class="entry"><label for="last-name">Last Name:</label><input type="text" required></div>
+          <div class="entry"><label for="email">Email:</label><input type="email" required></div>
+          <div class="entry"><label for="phone-number">Phone Number:</label><input type="tel"></div>
+          <div class="entry"><label for="message">Message:</label><textarea rows="6" placeholder="Your message here"
+              required></textarea></div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+    </section>
+
   </main>
 
   <footer>
@@ -304,10 +319,10 @@
     </a>
 
     <ul>
-      <li><a href="#">about herbie</a></li>
-      <li><a href="#">locations</a></li>
-      <li><a href="#">rewards</a></li>
-      <li><a href="#">contact us</a></li>
+      <li><a href="#why-herbie">why herbie</a></li>
+      <li><a href="#why-makeup">why makeup</a></li>
+      <li><a href="#best-sellers">best sellers</a></li>
+      <li><a href="#contact-us">contact us</a></li>
     </ul>
 
     <div class="social-links">
