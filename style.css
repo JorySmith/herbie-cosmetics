@@ -478,11 +478,9 @@ nav hr {
 
 .contact-us {
   margin: 1rem 0;
-
 }
 
 .contact-us h1 {
-  background-color: var(--dark-orange);
   color: #000;
   font-size: 2rem;
   text-align: center;
@@ -516,8 +514,8 @@ nav hr {
 
 .entry input:focus,
 .entry textarea:focus {
-  outline: 2px solid var(--dark-orange);  
-  border: 2px solid var(--dark-orange);
+  outline: 1px solid var(--clr-dark-purp);  
+  border: 1px solid var(--clr-dark-purp);
 }
 
 .contact-us-form button {  
