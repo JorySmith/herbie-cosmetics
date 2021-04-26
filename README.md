@@ -1,10 +1,10 @@
 # herbie-cosmetics
 
-A responsive, prototype e-commerce website for a local Nebraskan business.
+A responsive, prototype e-commerce website for a local Nebraskan business featuring local storage functionality and custom designed shopping cart.
 
-Built with JavaScript, Bootstrap, HTML5, and CSS3; featuring local storage and a custom shopping cart.
+See Live: https://jorysmith.github.io/herbie-cosmetics/
 
-
+Built with JavaScript, Bootstrap, HTML5, and CSS3. 
 
 Figma markup link and image:
 
