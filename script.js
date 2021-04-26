@@ -41,6 +41,7 @@ addToCartButtons.forEach(el =>
 //event listener for shopping cart 'checkout'
 completePurchase.addEventListener('click', clearCartAfterPurchase);
 
+updateShoppingCart()
 updateTotalShoppingCartItems();
 updateNavbarCartIconTotal();
 updateShoppingCartTotal()
@@ -65,10 +66,24 @@ function stickyNav() {
   }
 }
 
+function updateShoppingCart() {
+  // see whats in local storage
+  let shoppingCartItems = JSON.parse(localStorage.getItem('shoppingCartItems'))
+
+  // loop through each item object, add to cart
+  shoppingCartItems.map(item => {
+    let itemImage = item.image
+    let itemName = item.name
+    let itemPrice = item.price
+    addItemToCart(itemImage, itemName, itemPrice)
+  })
+}
+
 function updateNavbarCartIconTotal() {
   //update navbar shopping cart icon to reflect total items in shopping cart
   const totalCartItems = document.getElementById('total-cart-items');
   const updatedTotal = updateTotalShoppingCartItems().length.toString();
+
   //toggle hidden on cart icon total, avoid showing a zero
   //if cart is empty, when you add to cart, unhide icon
   if (updatedTotal == 0) {
@@ -101,18 +116,29 @@ function addClickedItemToCart(event) {
     'item-name')[0].innerText;
   const itemPrice = clickedItemContainer.getElementsByClassName(
     'item-price')[0].innerText;
-
-  //see if current items names in cart match clicked item name
-  const currentCartItemNames = document.getElementsByClassName(
-    'cart-item-name');
-
-  for (let i = 0; i < currentCartItemNames.length; i++) {
-    if (currentCartItemNames[i].innerText.trim() == itemName) {
-      alert("That item is already in your shopping cart");
-      return
-    }
+  const newItem = {
+    image: itemImage,
+    name: itemName,
+    price: itemPrice
   }
-  addItemToCart(itemImage, itemName, itemPrice)
+
+  // Get localStorage items, JSON parse them, turn into array of item objects
+  // localStorage.removeItem('shoppingCartItems')
+  let shoppingCartItems = JSON.parse(localStorage.getItem('shoppingCartItems'))
+  if (shoppingCartItems === null) {
+    let shoppingCartItems = []
+    shoppingCartItems.push(newItem)
+    localStorage.setItem('shoppingCartItems', JSON.stringify(shoppingCartItems))
+    addItemToCart(itemImage, itemName, itemPrice)
+  } else if (shoppingCartItems.some(item => item.name === newItem.name)) {
+    // See if item is already in local storage, no need to add it then
+    alert("This item is already in your shopping cart");
+    return
+  } else {
+    shoppingCartItems.push(newItem)
+    localStorage.setItem('shoppingCartItems', JSON.stringify(shoppingCartItems))
+    addItemToCart(itemImage, itemName, itemPrice)
+  }
 }
 
 function addItemToCart(itemImage, itemName, itemPrice) {
@@ -169,8 +195,28 @@ function addItemToCart(itemImage, itemName, itemPrice) {
 }
 
 function removeShoppingCartItem(event) {
-  //determine which item was clicked, remove that item
-  event.target.parentElement.parentElement.parentElement.remove();
+  // determine which item name was clicked
+  let removeItemName = event.target.parentElement.parentElement.previousSibling.previousSibling.innerText
+
+  //remove that item from local storage
+  let shoppingCartItems = JSON.parse(localStorage.getItem('shoppingCartItems'))
+  let newShoppingCartItems = shoppingCartItems.filter(item =>
+    item.name !== removeItemName
+  )
+  localStorage.setItem('shoppingCartItems', JSON.stringify(newShoppingCartItems))
+  console.log(localStorage.shoppingCartItems)
+
+  // clear shopping cart
+  const currentItems = document.getElementsByClassName(
+    'shopping-cart-items')[0];
+
+  if (updateTotalShoppingCartItems().length > 0) {
+    while (currentItems.hasChildNodes()) {
+      currentItems.removeChild(currentItems.firstChild)
+    }
+  }
+
+  updateShoppingCart()
   updateTotalShoppingCartItems();
   updateNavbarCartIconTotal();
   updateShoppingCartTotal()
@@ -189,9 +235,7 @@ function updateShoppingCartTotal() {
     const price = cartItem.getElementsByClassName(
       'cart-item-price')[0].innerText.replace('$', '')
     newTotal = newTotal + (quantity * parseFloat(price))
-
   }
-
 
   // insert total into shopping cart total
   document.getElementById('cart-total-price').innerText = "$" + newTotal;
