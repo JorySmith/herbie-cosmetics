@@ -71,12 +71,17 @@ function updateShoppingCart() {
   let shoppingCartItems = JSON.parse(localStorage.getItem('shoppingCartItems'))
 
   // loop through each item object, add to cart
-  shoppingCartItems.map(item => {
-    let itemImage = item.image
-    let itemName = item.name
-    let itemPrice = item.price
-    addItemToCart(itemImage, itemName, itemPrice)
-  })
+  if (shoppingCartItems === null) {
+    let shoppingCartItems = []
+    localStorage.setItem('shoppingCartItems', JSON.stringify(shoppingCartItems))
+  } else {
+    shoppingCartItems.map(item => {
+      let itemImage = item.image
+      let itemName = item.name
+      let itemPrice = item.price
+      addItemToCart(itemImage, itemName, itemPrice)
+    })
+  }
 }
 
 function updateNavbarCartIconTotal() {
