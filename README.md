@@ -1,5 +1,10 @@
 # herbie-cosmetics
-A local costmetics business website prototype
+
+A responsive, prototype e-commerce website for a local Nebraskan business.
+
+Built with JavaScript, Bootstrap, HTML5, and CSS3; featuring local storage and a custom shopping cart.
+
+
 
 Figma markup link and image:
 
