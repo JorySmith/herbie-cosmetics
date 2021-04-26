@@ -1,6 +1,6 @@
 # herbie-cosmetics
 
-A responsive prototype website for a local Nebraskan business.
+A responsive, prototype e-commerce website for a local Nebraskan business.
 
 Built with JavaScript, Bootstrap, HTML5, and CSS3; featuring local storage and a custom shopping cart.
 
