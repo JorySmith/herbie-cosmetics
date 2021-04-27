@@ -16,7 +16,7 @@ html,
 body {
   margin: 0;  
   font-family: var(--ff-sec); 
-  font-size: .85rem;
+  font-size: 1rem;
   color: #000;
 }
 
@@ -447,7 +447,7 @@ nav hr {
   justify-content: center;
   width: 10rem;
   text-align: center;
-  margin: .5rem;
+  margin: .5rem 1.5rem;
 }
 
 .why-herbie-reason i {
@@ -519,9 +519,10 @@ nav hr {
 }
 
 .contact-us-form button {  
-  background-color: #fff;
+  color: #fff;
+  background-color: var(--clr-dark-purp);  
   border: 4px solid var(--clr-dark-purp);
-  color: #000;
+  
   font-size: 1.25rem;
   width: 100%;
   padding: 1rem;
@@ -530,8 +531,8 @@ nav hr {
 
 .contact-us-form button:hover,  
 .contact-us-form button:focus {  
-  background-color: var(--clr-dark-purp);
-  color: #fff;
+  background-color: #fff;
+  color: #000;
 }
 
 footer {
@@ -551,14 +552,17 @@ footer a:hover {
 }
 
 footer ul {
+  display: flex;
+  justify-content: center;
   padding: 1rem 0;
 }
 
 footer li {
-  padding: .75rem 0;
+  padding: .75rem 2rem;
 }
 
 .social-links i {
+  font-size: 1.5rem;
   margin: 0 1rem 1rem;
 }
 

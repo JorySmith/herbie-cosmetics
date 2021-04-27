@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cosmetics, makeup, and beauty products for hair, nails, face, lips, and eyes" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Montserrat&display=swap" rel="stylesheet">
@@ -221,12 +222,27 @@
       <h1>Contact Us</h1>
       <div class="contact-us-container">
         <form class="contact-us-form" action="POST" method="post">
-          <div class="entry"><label for="first-name">First Name:</label><input type="text" required></div>
-          <div class="entry"><label for="last-name">Last Name:</label><input type="text" required></div>
-          <div class="entry"><label for="email">Email:</label><input type="email" required></div>
-          <div class="entry"><label for="phone-number">Phone Number:</label><input type="tel"></div>
-          <div class="entry"><label for="message">Message:</label><textarea rows="6" placeholder="Your message here"
-              required></textarea></div>
+          <div class="entry">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" required>
+          </div>
+          <div class="entry">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" required>
+          </div>
+          <div class="entry">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="entry">
+            <label for="phone-number">Phone Number:</label>
+            <input type="tel" id="phone-number">
+          </div>
+          <div class="entry">
+            <label for="message">Message:</label>
+            <textarea rows="6" placeholder="Your message here" id="message" required>
+            </textarea>
+          </div>
           <button type="submit">Submit</button>
         </form>
       </div>
