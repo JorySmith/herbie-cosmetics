@@ -11,6 +11,7 @@ Crafted and designed to receive stellar performance metrics from Google Chrome's
 2. Accessibility
 3. Best Practices
 4. SEO
+![Alt Text](/images/lighthouse.jpg)
 
 Figma Design Link: https://www.figma.com/file/IWYSrh26c7aX6soGrtXLNe/herbie?node-id=0%3A1
 
