@@ -220,6 +220,7 @@ nav hr {
 
 .shopping-cart-item {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -574,12 +575,14 @@ footer li {
   padding-top: 1rem;
 }
 
+
 @media (min-width: 700px) {
   .shopping-cart-container {
     margin: 1% auto;
     width: 80vw;
   }
   .shopping-cart-item {
+    flex-direction: row;
     justify-content: space-between;
   }
 }
