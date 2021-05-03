@@ -80,7 +80,7 @@ button {
 nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
 }
 
 nav hr {
@@ -464,6 +464,7 @@ nav hr {
   font-size: 1.15rem;
   font-weight: bold;
   padding: 1rem .25rem;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -481,8 +482,15 @@ nav hr {
   padding: 1rem;
 }
 
+.makeup-reason1 img, 
+.makeup-reason2 img, 
+.makeup-reason3 img {
+  width: 300px;
+}
+
 .contact-us {
-  margin: 1rem 0;
+  margin: 1rem auto;
+  max-width: 570px;
 }
 
 .contact-us h1 {
@@ -574,7 +582,6 @@ footer li {
 .copyright {
   padding-top: 1rem;
 }
-
 
 @media (min-width: 700px) {
   .shopping-cart-container {
