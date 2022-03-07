@@ -1,5 +1,5 @@
 # Herbie Cosmetics
-A responsive, performant e-commerce site built with JavaScript.
+A custom e-commerce site built with JavaScript that features a dynamic shopping cart with local storage.  
  
 ## Features
 - JavaScript local storage functionality
